@@ -37,7 +37,7 @@ def main():
         st.image("https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/supermarket.png?raw=true",use_column_width=True)
         st.info("This dashboard is made to let you analyse your supermarket data and generate insights about sales, customer behaviour, payment types and many other options.")
         st.header("Explore your dataset")
-        df=pd.read_csv("supermarketsales.csv",encoding="latin1")
+        df=pd.read_csv("supermarketsales.csv")
 
 
         if st.checkbox("Show Dataset"):
@@ -114,7 +114,7 @@ def main():
     elif choice=='Create some visuals':
         st.image("https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/visuals.jpeg?raw=true",use_column_width=True)
         st.header("Create some visuals")
-        df=pd.read_csv("supermarketsales.csv",encoding="latin1")
+        df=pd.read_csv("supermarketsales.csv")
             #st.dataframe(df.head(50))
         df['Date']=pd.to_datetime(df['Date'])
 
@@ -176,7 +176,7 @@ def main():
         st.header("RFM Analysis")
 
 
-        df=pd.read_csv("supermarketsales.csv",encoding="latin1")
+        df=pd.read_csv("supermarketsales.csv")
 
 
         df['Date']=pd.to_datetime(df['Date'])
@@ -294,7 +294,7 @@ def main():
 
     elif choice=='Machine Learning Algorithm':
 
-        df=pd.read_csv("supermarketsales.csv",encoding="latin1")
+        df=pd.read_csv("supermarketsales.csv")
 
 
         df['Date']=pd.to_datetime(df['Date'])
