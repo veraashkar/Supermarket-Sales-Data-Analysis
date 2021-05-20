@@ -34,8 +34,7 @@ def main():
     menu = ['Explore your dataset','Create some visuals','RFM Analysis','Machine Learning Algorithm','Upload your dataset']
     choice=st.sidebar.selectbox("Menu",menu)
     if choice=='Explore your dataset':
-        image= Image.open('https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/supermarket.png?raw=true')
-        st.image(image,use_column_width=True)
+        st.image("https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/supermarket.png?raw=true",use_column_width=True)
         st.info("This dashboard is made to let you analyse your supermarket data and generate insights about sales, customer behaviour, payment types and many other options.")
         st.header("Explore your dataset")
         df=pd.read_csv("supermarketsales.csv",encoding="latin1")
@@ -113,8 +112,7 @@ def main():
 
 
     elif choice=='Create some visuals':
-        image= Image.open('https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/visuals.jpeg?raw=true')
-        st.image(image,use_column_width=True)
+        st.image("https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/visuals.jpeg?raw=true",use_column_width=True)
         st.header("Create some visuals")
         df=pd.read_csv("supermarketsales.csv",encoding="latin1")
             #st.dataframe(df.head(50))
@@ -174,8 +172,7 @@ def main():
 
 
     elif choice=='RFM Analysis':
-        image= Image.open('https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/RFM.png?raw=true')
-        st.image(image,use_column_width=True)
+        st.image("https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/RFM.png?raw=true",use_column_width=True)
         st.header("RFM Analysis")
 
 
@@ -372,8 +369,7 @@ def main():
 
 
         #Modeling
-        image= Image.open('https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/KMeans.jpg?raw=true')
-        st.image(image)
+        st.image("https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/KMeans.jpg?raw=true")
         st.header("** Machine Learning algorithm: K-means Clustering**")
         st.subheader("What is K-means clustering and how does it help?")
         st.write("K-means clustering is an unsupervised machine learning that their purpose is to group observations that have similar characteristics, which means to group data points into distinct non-overlapping subgroups. We are using it to segment the supermarket customers to get a better understanding of them.")
@@ -457,8 +453,7 @@ def main():
 
 
     elif choice=='Upload your dataset':
-            image= Image.open('https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/analysis.jpg?raw=true')
-            st.image(image,use_column_width=True)
+            st.image("https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/analysis.jpg?raw=true",use_column_width=True)
             st.header("**Upload your dataset**")
             st.markdown("Upload your data here to get a similar analysis and dashboard as this one.")
 
