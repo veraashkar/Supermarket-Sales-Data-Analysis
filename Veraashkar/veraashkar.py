@@ -31,13 +31,17 @@ st.sidebar.markdown("An easy way to analyse supermarket sales data of three bran
 
 def main():
 
-    menu = ['Explore your dataset','Create some visuals','RFM Analysis','Machine Learning Algorithm','Upload your dataset']
+    data=st.sidebar.file_uploader("Browse to choose your file or drag an drop it here:",type=['csv','xlsx','txt','json'])
+    if data is not None:
+        df=pd.read_csv(data)
+
+    menu = ['Explore your dataset','Create some visuals','RFM Analysis','Machine Learning Algorithm']
     choice=st.sidebar.selectbox("Menu",menu)
     if choice=='Explore your dataset':
         st.image("https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/supermarket.png?raw=true",use_column_width=True)
         st.info("This dashboard is made to let you analyse your supermarket data and generate insights about sales, customer behaviour, payment types and many other options.")
         st.header("Explore your dataset")
-        df=pd.read_csv("supermarketsales.csv")
+        #df=pd.read_csv(data)
 
 
         if st.checkbox("Show Dataset"):
@@ -114,7 +118,7 @@ def main():
     elif choice=='Create some visuals':
         st.image("https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/visuals.jpeg?raw=true",use_column_width=True)
         st.header("Create some visuals")
-        df=pd.read_csv("supermarketsales.csv")
+        #df=pd.read_csv(data)
             #st.dataframe(df.head(50))
         df['Date']=pd.to_datetime(df['Date'])
 
@@ -176,7 +180,7 @@ def main():
         st.header("RFM Analysis")
 
 
-        df=pd.read_csv("supermarketsales.csv")
+        #df=pd.read_csv(data)
 
 
         df['Date']=pd.to_datetime(df['Date'])
@@ -294,7 +298,7 @@ def main():
 
     elif choice=='Machine Learning Algorithm':
 
-        df=pd.read_csv("supermarketsales.csv")
+        #df=pd.read_csv(data)
 
 
         df['Date']=pd.to_datetime(df['Date'])
@@ -452,18 +456,18 @@ def main():
 
 
 
-    elif choice=='Upload your dataset':
-            st.image("https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/analysis.jpg?raw=true",use_column_width=True)
-            st.header("**Upload your dataset**")
-            st.markdown("Upload your data here to get a similar analysis and dashboard as this one.")
+    #elif choice=='Upload your dataset':
+            #st.image("https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/analysis.jpg?raw=true",use_column_width=True)
+            #st.header("**Upload your dataset**")
+            #st.markdown("Upload your data here to get a similar analysis and dashboard as this one.")
 
-            data=st.file_uploader("Browse to choose your file or drag an drop it here:",type=['csv','xlsx','txt','json'])
-            if data is not None:
-                df=pd.read_csv(data)
-                st.dataframe(df.head(5))
-                with st.spinner('Loading...'):
-                    time.sleep(5)
-                st.success('Great! We will get back to you once your dashboard is ready')
+    #data=st.sidebar.file_uploader("Browse to choose your file or drag an drop it here:",type=['csv','xlsx','txt','json'])
+    #if data is not None:
+        #df=pd.read_csv(data)
+        #st.dataframe(df.head(5))
+        #with st.spinner('Loading...'):
+            #time.sleep(5)
+            #st.success('Great! We will get back to you once your dashboard is ready')
 
 
 
