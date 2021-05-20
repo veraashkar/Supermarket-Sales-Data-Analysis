@@ -34,7 +34,7 @@ def main():
     menu = ['Explore your dataset','Create some visuals','RFM Analysis','Machine Learning Algorithm','Upload your dataset']
     choice=st.sidebar.selectbox("Menu",menu)
     if choice=='Explore your dataset':
-        image= Image.open('supermarket.png')
+        image= Image.open('https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/supermarket.png?raw=true')
         st.image(image,use_column_width=True)
         st.info("This dashboard is made to let you analyse your supermarket data and generate insights about sales, customer behaviour, payment types and many other options.")
         st.header("Explore your dataset")
@@ -113,7 +113,7 @@ def main():
 
 
     elif choice=='Create some visuals':
-        image= Image.open('visuals.jpeg')
+        image= Image.open('https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/visuals.jpeg?raw=true')
         st.image(image,use_column_width=True)
         st.header("Create some visuals")
         df=pd.read_csv("supermarketsales.csv",encoding="latin1")
@@ -174,7 +174,7 @@ def main():
 
 
     elif choice=='RFM Analysis':
-        image= Image.open('RFM.png')
+        image= Image.open('https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/RFM.png?raw=true')
         st.image(image,use_column_width=True)
         st.header("RFM Analysis")
 
@@ -372,7 +372,7 @@ def main():
 
 
         #Modeling
-        image= Image.open('KMeans.jpg')
+        image= Image.open('https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/KMeans.jpg?raw=true')
         st.image(image)
         st.header("** Machine Learning algorithm: K-means Clustering**")
         st.subheader("What is K-means clustering and how does it help?")
@@ -457,7 +457,7 @@ def main():
 
 
     elif choice=='Upload your dataset':
-            image= Image.open('analysis.jpg')
+            image= Image.open('https://github.com/veraashkar/Supermarket-Sales-Data-Analysis/blob/main/Veraashkar/analysis.jpg?raw=true')
             st.image(image,use_column_width=True)
             st.header("**Upload your dataset**")
             st.markdown("Upload your data here to get a similar analysis and dashboard as this one.")
